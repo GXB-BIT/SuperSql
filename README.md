@@ -57,11 +57,13 @@ jar {
 - <font color="blue"></font>支持黑名单功能，每行一个域名或者一个路径
 - <font color="blue"></font>静态文件过滤，自动跳过图片、CSS、JS 等静态资源
 - <font color="blue"></font>支持URL中path的扫描，用于发现注入点隐藏在路径中
-- 黑名单自动保存到burp目录吓命名为supersql_blacklist.txt
+- 支持正则表达式黑名单，更新后自动保存到burp目录下，命名为supersql_blacklist.txt
 - 支持自定义报错信息，自动保存到burp目录下，命名为supersql_error_patterns.txt
 - 支持自动从返回包以及请求包中提取url清奇路径以及参数
 # 插件截图
-<img width="1580" height="823" alt="image" src="https://github.com/user-attachments/assets/9e02959d-80e4-4d8c-be30-7a73f1645385" />
+<img width="1920" height="970" alt="image" src="https://github.com/user-attachments/assets/6c859e4f-d18e-4e62-8dfc-4445c139f21d" />
 
-<img width="1582" height="830" alt="image" src="https://github.com/user-attachments/assets/2a2fb10b-941f-49fc-8bf2-54c2930c13c3" />
+<img width="1920" height="953" alt="image" src="https://github.com/user-attachments/assets/0235b152-2779-4bbd-b230-32898469360a" />
+
+
 
