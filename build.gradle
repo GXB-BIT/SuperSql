@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+}
+
+group 'net.portswigger.burp.extensions.example'
+version '1.0.0'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'net.portswigger.burp.extensions:montoya-api:2026.2'
+}
+
+// 注意：Montoya API 2026.2 需要 Java 17 或更高版本
+// 请安装 JDK 17 并设置 JAVA_HOME 环境变量
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+jar {
+    from {
+        // 修复：使用 forEach 替代 get()
+        configurations.runtimeClasspath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+
+    // 可选：避免重复文件冲突
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
