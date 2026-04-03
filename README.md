@@ -48,7 +48,7 @@ jar {
 - 出现具体数值长度差，代表单引号和两个单引号返回长度的差值，针对数值型参数代表-1数据包和-0数据包的差值，表明可能存在注入点
 - <font color="red">==> 返回</font> 代表着 原始包的长度和两个单引号的长度相同且和一个单引号的长度不同，表明很可能是注入。
 - <font color="blue">Error! 返回</font> 代表响应包中含有数据库报错信息。
-- <font color="blue"></font> 支持json格式，V1.9以上版本已支持json多层嵌套。
+- <font color="blue"></font> 支持json格式，支持json多层嵌套。
 - <font color="blue"></font>支持参数的值是纯数字则-1，-0。
 - <font color="blue"></font>默认支持cookie测试
 - <font color="blue"></font>监控Proxy流量。
